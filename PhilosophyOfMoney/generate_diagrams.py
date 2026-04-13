@@ -125,8 +125,8 @@ save(fig, '4-4-ltcm-leverage.png')
 # 3.  2008 Model Failure Chain  (slide 5.3)
 # ═══════════════════════════════════════════════════════════════════════
 print('3. Model failure chain')
-fig, ax = new_fig(14, 3.2)
-ax.text(7, 2.95, '2008: From Model Assumption to Systemic Crisis',
+fig, ax = new_fig(14, 5.5)
+ax.text(7, 5.2, '2008: From Model Assumption to Systemic Crisis',
         ha='center', color=GOLD, fontsize=11, fontweight='bold')
 
 steps = [
@@ -141,9 +141,9 @@ steps = [
 xs = np.linspace(1.1, 12.9, len(steps))
 bw = 1.6
 for (text, fc, ec), x in zip(steps, xs):
-    box(ax, x, 1.5, bw, 0.9, text, fc=fc, ec=ec, fs=8.5)
+    box(ax, x, 3.0, bw, 1.4, text, fc=fc, ec=ec, fs=9.5)
 for i in range(len(xs) - 1):
-    arrow(ax, xs[i] + bw / 2, 1.5, xs[i + 1] - bw / 2, 1.5)
+    arrow(ax, xs[i] + bw / 2, 3.0, xs[i + 1] - bw / 2, 3.0)
 save(fig, '5-3-model-failure-chain.png')
 
 
@@ -244,4 +244,32 @@ for cx, cy, text, fc, ec in leaves:
 
 save(fig, '11-2-public-banking.png')
 
-print(f'\nAll 6 diagrams written to {OUT}')
+
+# ═══════════════════════════════════════════════════════════════════════
+# 7.  Rational Actor Model  (section 5, early slide)
+# ═══════════════════════════════════════════════════════════════════════
+print('7. Rational actor model')
+fig, ax = new_fig(12, 4.8)
+ax.text(6, 4.45, 'Rational Actor Model: Decision Flow',
+        ha='center', color=GOLD, fontsize=12, fontweight='bold')
+
+box(ax, 2.1, 2.6, 3.0, 1.35,
+    'Inputs\nStable preferences\nFull information',
+    fc=SLATE, ec=GOLD, fs=9.2)
+box(ax, 6.0, 2.6, 3.2, 1.35,
+    'Process\nCompare options\nExpected utility',
+    fc='#1c2c3e', ec=GOLD, fs=9.2)
+box(ax, 9.9, 2.6, 3.0, 1.35,
+    'Choice\nSelect utility-\nmaximizing action',
+    fc='#162a1e', ec=VERD, fs=9.2)
+
+arrow(ax, 3.6, 2.6, 4.4, 2.6)
+arrow(ax, 7.6, 2.6, 8.4, 2.6)
+
+ax.text(6, 0.85,
+        'Market claim: aggregating many such choices yields informative prices',
+        ha='center', color=DIMGRAY, fontsize=9)
+
+save(fig, '5-2-rational-actor-model.png')
+
+print(f'\nAll 7 diagrams written to {OUT}')
