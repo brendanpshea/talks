@@ -209,6 +209,27 @@
   border-radius: 0 0 6px 0;
 }
 
+/* ---- Mermaid Diagrams ---- */
+.reveal .mermaid {
+  background: rgba(10, 15, 26, 0.35);
+  border: 1px solid rgba(201, 168, 76, 0.25);
+  border-radius: 8px;
+  padding: 10px;
+  margin: 0.7em auto;
+  max-width: 96%;
+}
+
+.reveal .mermaid svg {
+  max-width: 100% !important;
+  height: auto !important;
+  background: transparent !important;
+}
+
+.reveal .mermaid svg .label,
+.reveal .mermaid svg text {
+  fill: #e8dcc8 !important;
+}
+
 /* ---- Discussion Question Box ---- */
 .discussion {
   background: linear-gradient(135deg, rgba(90,138,122,0.12), rgba(201,168,76,0.08));

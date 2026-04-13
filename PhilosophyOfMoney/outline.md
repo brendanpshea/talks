@@ -3,6 +3,19 @@
 
 Sections 1–3 are already built in reveal.js. This document outlines the remaining sections slide by slide, following the same conventions: section title slide → content slides with fragments → discussion slide.
 
+## Constructed Visual Assets
+
+Prepared Mermaid source files for suggested image/chart slots are in [visuals/README.md](visuals/README.md).
+
+- 4.3: [visuals/4-3-virtuous-vs-vicious-firm.mmd](visuals/4-3-virtuous-vs-vicious-firm.mmd)
+- 4.4: [visuals/4-4-ltcm-leverage-structure.mmd](visuals/4-4-ltcm-leverage-structure.mmd)
+- 5.3: [visuals/5-3-model-assumption-to-systemic-risk.mmd](visuals/5-3-model-assumption-to-systemic-risk.mmd)
+- 6.1: [visuals/6-1-aristotle-natural-vs-unnatural-wealth.mmd](visuals/6-1-aristotle-natural-vs-unnatural-wealth.mmd)
+- 7.3: [visuals/7-3-interest-rate-spectrum.mmd](visuals/7-3-interest-rate-spectrum.mmd)
+- 8.2: [visuals/8-2-legal-to-fraud-spectrum.mmd](visuals/8-2-legal-to-fraud-spectrum.mmd)
+- 9.1: [visuals/9-1-financial-sector-growth.mmd](visuals/9-1-financial-sector-growth.mmd)
+- 11.2: [visuals/11-2-public-banking-options.mmd](visuals/11-2-public-banking-options.mmd)
+
 ---
 
 ## Section 4: What Does It Mean to Be "Smart With Money"?

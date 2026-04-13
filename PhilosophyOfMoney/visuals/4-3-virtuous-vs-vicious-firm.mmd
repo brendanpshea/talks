@@ -1,0 +1,17 @@
+flowchart LR
+  subgraph VIRTUOUS_FIRM["Virtuous firm"]
+    V1["Encourages dissent"]
+    V2["Stress-tests assumptions"]
+    V3["Admits mistakes"]
+    V4["Learns and adapts"]
+  end
+
+  subgraph VICIOUS_FIRM["Vicious firm"]
+    X1["Punishes doubt"]
+    X2["Rewards groupthink"]
+    X3["Hides bad news"]
+    X4["Repeats preventable failures"]
+  end
+
+  V1 --> V2 --> V3 --> V4
+  X1 --> X2 --> X3 --> X4

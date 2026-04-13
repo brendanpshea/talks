@@ -1,0 +1,13 @@
+flowchart LR
+  M["Mortgage\nabout 6% APR"] --> C["Car loan\nabout 8% APR"]
+  C --> CC["Credit card\nabout 25% APR"]
+  CC --> P["Payday loan\nabout 400% APR"]
+  P --> L["Loan shark\nvery high and coercive"]
+
+  classDef normal fill:#d7f0d8,stroke:#3a7a3f,color:#111;
+  classDef warning fill:#f7e7b4,stroke:#8a6d1d,color:#111;
+  classDef danger fill:#f3c0bf,stroke:#8b2e2d,color:#111;
+
+  class M,C normal;
+  class CC warning;
+  class P,L danger;
