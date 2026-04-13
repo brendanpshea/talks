@@ -1,0 +1,431 @@
+/* =============================================
+   History & Philosophy of Money and Finance
+   Reveal.js Custom Theme
+   ============================================= */
+
+:root {
+  --r-background-color: #0a0f1a;
+  --r-main-font: 'Source Sans 3', 'Source Sans Pro', sans-serif;
+  --r-main-font-size: 30px;
+  --r-main-color: #d4d0c8;
+  --r-heading-font: 'Playfair Display', Georgia, serif;
+  --r-heading-color: #e8dcc8;
+  --r-heading-text-transform: none;
+  --r-heading-letter-spacing: -0.02em;
+  --r-link-color: #c9a84c;
+  --r-link-color-hover: #e8c95a;
+  --r-selection-background-color: #c9a84c33;
+  --gold: #c9a84c;
+  --gold-dim: #8a6d2b;
+  --parchment: #e8dcc8;
+  --ink: #1a1f2e;
+  --slate: #2a3040;
+  --copper: #b87333;
+  --verdigris: #5a8a7a;
+}
+
+/* ---- Base ---- */
+.reveal {
+  font-weight: 300;
+}
+
+.reveal h1, .reveal h2, .reveal h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 700;
+  line-height: 1.15;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.5);
+}
+
+.reveal h1 { font-size: 2.2em; font-weight: 900; }
+.reveal h2 { font-size: 1.6em; }
+.reveal h3 { font-size: 1.2em; color: var(--gold); font-weight: 400; font-style: italic; }
+
+.reveal p, .reveal li {
+  line-height: 1.6;
+}
+
+.reveal .slides section {
+  padding: 40px;
+}
+
+/* ---- Title Slide ---- */
+.title-slide {
+  text-align: center;
+}
+.title-slide h1 {
+  font-size: 2.4em;
+  margin-bottom: 0.1em;
+  background: linear-gradient(135deg, var(--parchment) 0%, var(--gold) 50%, var(--copper) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.title-slide .subtitle {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 1.1em;
+  color: var(--gold-dim);
+  margin-bottom: 1.5em;
+}
+.title-slide .presenter {
+  font-size: 0.85em;
+  color: #8a8578;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+.title-slide .divider {
+  width: 120px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  margin: 1.2em auto;
+}
+
+/* ---- Coin Ornament ---- */
+.coin-ornament {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  border: 2px solid var(--gold-dim);
+  border-radius: 50%;
+  line-height: 56px;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4em;
+  color: var(--gold);
+  margin-bottom: 0.5em;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(201,168,76,0.15);
+}
+
+/* ---- Section Title Slides ---- */
+.section-title {
+  text-align: left;
+}
+.section-title .section-number {
+  font-family: 'Playfair Display', serif;
+  font-size: 5em;
+  font-weight: 900;
+  color: var(--gold);
+  opacity: 0.15;
+  position: absolute;
+  top: -20px;
+  left: 30px;
+  line-height: 1;
+}
+.section-title h2 {
+  font-size: 1.8em;
+  position: relative;
+  z-index: 2;
+  border-left: 4px solid var(--gold);
+  padding-left: 24px;
+  margin-left: 10px;
+}
+.section-title h3 {
+  position: relative;
+  z-index: 2;
+  margin-left: 38px;
+}
+
+/* ---- Blockquotes ---- */
+.reveal blockquote {
+  background: rgba(201,168,76,0.06);
+  border-left: 4px solid var(--gold);
+  padding: 20px 30px;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 1.05em;
+  color: var(--parchment);
+  width: 85%;
+  margin: 0.8em auto;
+  box-shadow: 0 4px 30px rgba(0,0,0,0.3);
+}
+.reveal blockquote .attribution {
+  display: block;
+  font-family: 'Source Sans 3', sans-serif;
+  font-style: normal;
+  font-size: 0.7em;
+  color: var(--gold-dim);
+  margin-top: 12px;
+  text-align: right;
+}
+
+/* ---- Styled Lists ---- */
+.reveal ul {
+  list-style: none;
+  padding-left: 0;
+}
+.reveal ul li {
+  padding-left: 1.5em;
+  position: relative;
+  margin-bottom: 0.5em;
+}
+.reveal ul li::before {
+  content: '◆';
+  color: var(--gold-dim);
+  font-size: 0.5em;
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+}
+
+/* ---- Key Term Emphasis ---- */
+.key {
+  color: var(--gold);
+  font-weight: 600;
+}
+
+/* ---- Tables ---- */
+.reveal table {
+  width: 90%;
+  margin: 0.8em auto;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 0.8em;
+}
+.reveal table thead th {
+  background: var(--gold);
+  color: var(--ink);
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  padding: 12px 16px;
+  text-align: left;
+  border: none;
+}
+.reveal table thead th:first-child {
+  border-radius: 6px 0 0 0;
+}
+.reveal table thead th:last-child {
+  border-radius: 0 6px 0 0;
+}
+.reveal table tbody td {
+  background: rgba(42, 48, 64, 0.6);
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(201,168,76,0.12);
+  vertical-align: top;
+}
+.reveal table tbody tr:last-child td:first-child {
+  border-radius: 0 0 0 6px;
+}
+.reveal table tbody tr:last-child td:last-child {
+  border-radius: 0 0 6px 0;
+}
+
+/* ---- Discussion Question Box ---- */
+.discussion {
+  background: linear-gradient(135deg, rgba(90,138,122,0.12), rgba(201,168,76,0.08));
+  border: 1px solid var(--verdigris);
+  border-radius: 8px;
+  padding: 24px 30px;
+  margin: 1em auto;
+  width: 85%;
+  text-align: left;
+}
+.discussion .label {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.6em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--verdigris);
+  margin-bottom: 8px;
+}
+.discussion p {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 0.95em;
+  color: var(--parchment);
+  margin: 0;
+}
+
+/* ---- Timeline ---- */
+.timeline {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0;
+  margin: 1em auto;
+  width: 95%;
+  position: relative;
+}
+.timeline::after {
+  content: '';
+  position: absolute;
+  top: 18px;
+  left: 5%;
+  right: 5%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--gold-dim), var(--gold), var(--gold-dim));
+  z-index: 0;
+}
+.timeline .event {
+  flex: 1;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  padding: 0 4px;
+}
+.timeline .event .dot {
+  width: 12px;
+  height: 12px;
+  background: var(--gold);
+  border-radius: 50%;
+  margin: 12px auto 10px;
+  box-shadow: 0 0 10px rgba(201,168,76,0.4);
+}
+.timeline .event .year {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.55em;
+  color: var(--gold);
+  font-weight: 600;
+}
+.timeline .event .desc {
+  font-size: 0.5em;
+  color: #8a8578;
+  line-height: 1.3;
+  margin-top: 4px;
+}
+
+/* ---- Compare Cards ---- */
+.compare-cards {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  margin: 1em auto;
+  width: 90%;
+}
+.compare-cards .card {
+  flex: 1;
+  background: rgba(42, 48, 64, 0.5);
+  border-radius: 8px;
+  padding: 24px;
+  border-top: 3px solid var(--gold-dim);
+}
+.compare-cards .card.now {
+  border-top-color: var(--gold);
+}
+.compare-cards .card h4 {
+  font-family: 'Playfair Display', serif;
+  color: var(--gold);
+  font-size: 0.9em;
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+.compare-cards .card ul li {
+  font-size: 0.75em;
+  margin-bottom: 0.35em;
+}
+
+/* ---- Background Accent ---- */
+.accent-bg {
+  background:
+    radial-gradient(ellipse at 80% 20%, rgba(201,168,76,0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 20% 80%, rgba(90,138,122,0.04) 0%, transparent 50%);
+}
+
+/* ---- Roadmap ---- */
+.roadmap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 24px;
+  width: 88%;
+  margin: 0.8em auto;
+  font-size: 0.72em;
+}
+.roadmap .item {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(201,168,76,0.08);
+}
+.roadmap .item .num {
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--gold-dim);
+  font-size: 0.85em;
+  min-width: 24px;
+}
+
+/* ---- Image + Text Layout ---- */
+.img-text-row {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  width: 92%;
+  margin: 0.5em auto;
+}
+.img-text-row .img-col {
+  flex: 0 0 300px;
+  text-align: center;
+}
+.img-text-row .img-col img {
+  max-width: 100%;
+  max-height: 340px;
+  border-radius: 6px;
+  border: 2px solid var(--gold-dim);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+.img-text-row .img-col .caption {
+  font-size: 0.5em;
+  color: #6a6560;
+  margin-top: 6px;
+  font-style: italic;
+}
+.img-text-row .text-col {
+  flex: 1;
+}
+.img-text-row .text-col ul li {
+  font-size: 0.85em;
+}
+
+/* Centered image with caption */
+.img-center {
+  text-align: center;
+  margin: 0.8em auto;
+}
+.img-center img {
+  max-height: 320px;
+  border-radius: 6px;
+  border: 2px solid var(--gold-dim);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+.img-center .caption {
+  font-size: 0.5em;
+  color: #6a6560;
+  margin-top: 8px;
+  font-style: italic;
+}
+
+/* ---- Key Concept Box ---- */
+.concept-box {
+  background: rgba(201,168,76,0.06);
+  border: 1px solid rgba(201,168,76,0.2);
+  border-radius: 8px;
+  padding: 20px 28px;
+  margin: 0.8em auto;
+  width: 85%;
+}
+.concept-box .concept-label {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.55em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--gold);
+  margin-bottom: 6px;
+}
+
+/* ---- Thinker Quote Slide ---- */
+.thinker-slide {
+  text-align: left;
+}
+.thinker-slide .thinker-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1em;
+  color: var(--gold);
+  font-weight: 700;
+  margin-bottom: 0.1em;
+}
+.thinker-slide .thinker-dates {
+  font-size: 0.65em;
+  color: #8a8578;
+  margin-bottom: 0.8em;
+}
