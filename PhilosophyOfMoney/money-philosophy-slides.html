@@ -678,6 +678,7 @@
 
 <section class="accent-bg">
   <h2>Case Study: Enron</h2>
+  Enron was an energy company that collapsed in 2001 after it was revealed that it had been hiding debt and inflating profits through complex accounting and special-purpose entities. The scandal led to criminal convictions and the dissolution of Arthur Andersen, one of the largest accounting firms.
   <ul>
     <li class="fragment">Enron rewarded aggressive targets and sidelined people who raised concerns.</li>
     <li class="fragment">Complex accounting made risk and losses less visible to outsiders and insiders.</li>
@@ -755,7 +756,7 @@
 <section class="accent-bg">
   <h2>The Rational Actor Model</h2>
   <p style="font-size:0.78em; color:var(--gold-dim); margin:0.2em 0 0.7em 0;">
-    One of the most influential models in economics is the <span class="key">rational actor model</span>, which assumes that individuals are perfectly rational and always optimize their utility given their preferences and constraints. Prominent adv
+    One of the most influential models in economics is the <span class="key">rational actor model</span>, which assumes that individuals are perfectly rational and always optimize their utility given their preferences and constraints. Prominent advocates include Adam Smith (sort of), John von Neumann, and Milton Friedman. Many modern financial and economic models are built on this foundation.
   </p>
   <div style="text-align:center; margin:0.4em auto 0.7em auto;">
     <img src="visuals/5-2-rational-actor-model.png" alt="Rational actor model decision flow" style="max-height:320px; max-width:98%; border-radius:6px;">
@@ -817,6 +818,7 @@
 
 <section class="accent-bg">
   <h2>Case Study: 2008 and Model Failure</h2>
+  In 2008, the financial crisis revealed that many models used by banks and regulators had failed to predict or prevent the collapse. The models underestimated the risk of mortgage-backed securities and the interconnectedness of financial institutions. This failure was due to a combination of overreliance on flawed assumptions, lack of transparency, and incentives that discouraged questioning the models.
     <div style="text-align:center; margin-top:0.5em;">
       <img src="visuals/5-3-model-failure-chain.png" alt="Model assumption to systemic crisis" style="max-height:460px; max-width:98%; border-radius:6px;">
     </div>
@@ -1482,6 +1484,34 @@ Reveal.initialize({
   transitionSpeed: 'default',
   backgroundTransition: 'fade',
   pdfSeparateFragments: false,
+});
+
+// Wrap each content slide's children in a height-constrained scrollable div.
+// Done after Reveal finishes layout so it doesn't conflict with Reveal's
+// centering transforms or inline styles.
+Reveal.on('ready', () => {
+  const SLIDE_H  = 700; // must match Reveal.initialize height
+  const PAD      = 30;  // must match .reveal .slides section padding-top/bottom in CSS
+  const scrollH  = SLIDE_H - PAD * 2; // 640px
+
+  // Skip purely structural/decorative slides
+  const skipClasses = ['title-slide', 'section-title'];
+
+  document.querySelectorAll('.reveal .slides section').forEach(section => {
+    if (skipClasses.some(cls => section.classList.contains(cls))) return;
+
+    const scroller = document.createElement('div');
+    scroller.className = 'slide-scroller';
+    scroller.style.height = scrollH + 'px';
+
+    while (section.firstChild) scroller.appendChild(section.firstChild);
+    section.appendChild(scroller);
+  });
+
+  // Reset scroll position to top on every slide change
+  Reveal.on('slidechanged', () => {
+    document.querySelectorAll('.slide-scroller').forEach(s => { s.scrollTop = 0; });
+  });
 });
 </script>
 </body>
