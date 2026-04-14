@@ -45,7 +45,27 @@
 }
 
 .reveal .slides section {
-  padding: 40px;
+  padding: 30px 40px;
+  height: 700px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  scrollbar-gutter: stable;
+}
+
+/* Themed scrollbar — only visible on overflowing slides */
+.reveal .slides section::-webkit-scrollbar {
+  width: 5px;
+}
+.reveal .slides section::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.25);
+  border-radius: 3px;
+}
+.reveal .slides section::-webkit-scrollbar-thumb {
+  background: var(--gold-dim);
+  border-radius: 3px;
+}
+.reveal .slides section::-webkit-scrollbar-thumb:hover {
+  background: var(--gold);
 }
 
 /* ---- Title Slide ---- */
