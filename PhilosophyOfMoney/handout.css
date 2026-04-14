@@ -1,0 +1,135 @@
+/* ================================================
+   Handout stylesheet — History and Philosophy of Money
+   Garamond 10pt body/lists; colored headings
+   ================================================ */
+
+:root {
+  --heading-color: #2c4a7c;   /* deep academic navy */
+  --rule-color:    #c0c8d8;
+  --text-color:    #1a1a1a;
+  --link-color:    #2c4a7c;
+}
+
+/* ---- Base ---------------------------------------- */
+
+body {
+  font-family: Garamond, "EB Garamond", "Cormorant Garamond", Georgia, serif;
+  font-size: 10pt;
+  line-height: 1.55;
+  color: var(--text-color);
+  max-width: 7in;
+  margin: 0.9in auto;
+  padding: 0 0.5rem;
+}
+
+/* ---- Headings ------------------------------------ */
+
+h1 {
+  font-family: Garamond, "EB Garamond", "Cormorant Garamond", Georgia, serif;
+  font-size: 18pt;
+  font-weight: bold;
+  color: var(--heading-color);
+  margin-top: 1.2em;
+  margin-bottom: 0.25em;
+  line-height: 1.2;
+}
+
+h2 {
+  font-family: Garamond, "EB Garamond", "Cormorant Garamond", Georgia, serif;
+  font-size: 13pt;
+  font-weight: bold;
+  color: var(--heading-color);
+  margin-top: 1.4em;
+  margin-bottom: 0.2em;
+  border-bottom: 1px solid var(--rule-color);
+  padding-bottom: 0.12em;
+}
+
+h3 {
+  font-family: Garamond, "EB Garamond", "Cormorant Garamond", Georgia, serif;
+  font-size: 11pt;
+  font-weight: bold;
+  font-style: italic;
+  color: var(--heading-color);
+  margin-top: 1.1em;
+  margin-bottom: 0.15em;
+}
+
+/* ---- Paragraphs ---------------------------------- */
+
+p {
+  font-size: 10pt;
+  margin: 0.5em 0 0.6em;
+}
+
+/* ---- Lists --------------------------------------- */
+
+ul, ol {
+  font-size: 10pt;
+  margin: 0.4em 0 0.6em;
+  padding-left: 1.6em;
+}
+
+li {
+  margin-bottom: 0.4em;
+  line-height: 1.5;
+}
+
+li > ul,
+li > ol {
+  margin-top: 0.25em;
+}
+
+/* ---- Horizontal rules ---------------------------- */
+
+hr {
+  border: none;
+  border-top: 1px solid var(--rule-color);
+  margin: 1.2em 0;
+}
+
+/* ---- Inline formatting --------------------------- */
+
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+/* ---- Byline / footer text ------------------------ */
+
+body > p:first-of-type em,
+body > p:last-of-type em {
+  font-size: 9.5pt;
+  color: #444;
+}
+
+/* ---- Links --------------------------------------- */
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ---- Print adjustments --------------------------- */
+
+@media print {
+  body {
+    margin: 0.75in;
+    max-width: none;
+  }
+
+  h2 {
+    page-break-after: avoid;
+  }
+
+  li {
+    page-break-inside: avoid;
+  }
+}
